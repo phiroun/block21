@@ -4,12 +4,12 @@ function Car(make, model, year) {
   this.year = year;
 }
 
-var myCar = new Car("Toyota", "Camry", 2022);
-console.log(myCar.getDescription());
-
 Car.prototype.getDescription = function () {
   return "This is a " + this.year + " " + this.make + " " + this.model + ".";
 };
+
+var myCar = new Car("Toyota", "Camry", 2022);
+console.log(myCar.getDescription());
 
 function ElectricCar(make, model, year, range) {
   Car.call(this, make, model, year);
